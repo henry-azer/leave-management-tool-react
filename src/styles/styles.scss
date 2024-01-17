@@ -1,0 +1,133 @@
+/* ----- GLOBAL IMPORTS START ----- */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../assets/fonts/GOTHIC.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ----- GLOBAL IMPORTS END ----- */
+
+/* -------------------------------------------------------- */
+
+/* ----- GLOBAL PROPS START ----- */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  font-family: 'Century Gothic';
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.light-theme {
+  @import './base/light-styles.scss';
+}
+
+.dark-theme {
+  @import './base/dark-styles.scss';
+}
+
+.prevent-drag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+/* ----- GLOBAL PROPS END ----- */
+
+/* -------------------------------------------------------- */
+
+/* ---------- MEDIA QUERIES START -------------------- */
+@media only screen and (max-width: 1280px) {
+}
+
+@media only screen and (max-width: 1260px) {
+}
+
+@media only screen and (max-width: 1088px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media only screen and (max-width: 577px) {
+}
+
+/* -------------- ANIMATIONS START------------------------- */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes load-line {
+  0% {
+    width: 0;
+  }
+
+  10% {
+    width: 5%;
+  }
+
+  20% {
+    width: 15%;
+  }
+
+  30% {
+    width: 25%;
+  }
+
+  40% {
+    width: 30%;
+  }
+
+  50% {
+    width: 44%;
+  }
+
+  60% {
+    width: 50%;
+  }
+
+  70% {
+    width: 72%;
+  }
+
+  80% {
+    width: 84%;
+  }
+
+  90% {
+    width: 92%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* -------------------------------------------------------- */

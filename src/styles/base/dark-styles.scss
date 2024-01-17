@@ -1,0 +1,38 @@
+$primary-color: #fff;
+$background-color: #333;
+$text-color: #fff;
+
+#root {
+  background-color: $background-color;
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: $text-color;
+  color: $background-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: #7bb4f1;
+  }
+}
+
+.theme-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.translate-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

@@ -1,6 +1,6 @@
 const en = {
-  login: {
-    title: 'Login Page'
+  home: {
+    title: 'Home Page'
   },
   profile: {
     title: 'Profile Page'

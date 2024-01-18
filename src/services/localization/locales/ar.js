@@ -1,6 +1,6 @@
 const ar = {
-  login: {
-    title: 'صفحة تسجيل الدخول'
+  home: {
+    title: 'الصفحة الرئيسية'
   },
   profile: {
     title: 'الصفحة الشخصية'

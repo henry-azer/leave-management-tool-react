@@ -4,7 +4,11 @@ function ThemeButton() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <button type="button" className="button theme-button" onClick={toggleTheme}>
+    <button
+      type="button"
+      className="button button-theme theme-button"
+      onClick={toggleTheme}
+    >
       {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
     </button>
   )

@@ -1,18 +1,39 @@
 const en = {
-  home: {
+  dashboard: {
     title: 'Home Page'
   },
-  profile: {
-    title: 'Profile Page'
+
+  employees: {
+    title: 'Employees Page'
   },
-  layout: {
-    base: {
-      title: 'Base Layout'
-    },
-    main: {
-      title: 'Main Layout'
-    }
+
+  attendance: {
+    title: 'Attendance Page'
   },
+
+  statistics: {
+    title: 'Statistics Page'
+  },
+
+  settings: {
+    title: 'Settings Page'
+  },
+
+  policies: {
+    title: 'Policies Page'
+  },
+
+  sidebar: {
+    notifications: 'Notifications',
+    dashboard: 'Dashboard',
+    employees: 'Employees',
+    attendance: 'Attendance',
+    statistics: 'Statistics',
+    settings: 'Settings',
+    policies: 'Policies',
+    logout: 'Logout'
+  },
+
   snackbar: {
     show: 'Show Snackbar'
   }

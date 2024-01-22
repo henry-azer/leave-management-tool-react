@@ -34,6 +34,14 @@ const ar = {
     logout: 'تسجيل الخروج'
   },
 
+  header: {
+    greeting: 'صباح الخير',
+    profile: 'الصفحة الشخصية',
+    settings: 'الاعدادات',
+    help: 'المساعدة',
+    logout: 'تسجيل الخروج'
+  },
+
   snackbar: {
     show: 'اظهار اشعار'
   }

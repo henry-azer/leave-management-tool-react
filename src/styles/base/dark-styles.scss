@@ -13,6 +13,7 @@ $text-color: #e8e8e8;
   min-height: 100vh;
 }
 
+// BUTTONS
 .button-theme {
   background-color: $text-color;
   color: $background-color;
@@ -23,25 +24,29 @@ $text-color: #e8e8e8;
   }
 }
 
+// SIDE BAR
 .side-bar-theme {
   background-color: $primary-color;
 
   .side-bar-item,
   .side-bar-item-expanded {
     color: $accent-color;
-
-    &:hover {
-      color: $accent-color;
-      opacity: 0.65;
-    }
   }
 
   .side-bar-item-active {
     color: $secondary-color;
+  }
+}
 
-    &:hover {
-      color: $secondary-color;
-      opacity: 0.65;
-    }
+// HEADER
+.header-theme {
+  background-color: $primary-color;
+
+  .dropdown-menu {
+    background: $primary-color;
+  }
+
+  .dropdown-menu::before {
+    background: $primary-color;
   }
 }

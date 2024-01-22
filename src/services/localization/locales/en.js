@@ -34,6 +34,14 @@ const en = {
     logout: 'Logout'
   },
 
+  header: {
+    greeting: 'Good Morning',
+    profile: 'Profile',
+    settings: 'Settings',
+    help: 'Help',
+    logout: 'Logout'
+  },
+
   snackbar: {
     show: 'Show Snackbar'
   }

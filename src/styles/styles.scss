@@ -63,12 +63,12 @@ body {
 
 .theme-button {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  bottom: 20px;
+  right: 80px;
 
   [dir='rtl'] & {
     right: auto;
-    left: 20px;
+    left: 90px;
   }
 }
 
@@ -99,7 +99,15 @@ body {
 
   &.side-bar-expand {
     width: 150px;
-    padding: 0 20px;
+
+    + .header {
+      left: 15%;
+      width: 80%;
+
+      [dir='rtl'] & {
+        right: 15%;
+      }
+    }
   }
 
   .indicator {
@@ -145,7 +153,7 @@ body {
       justify-items: center;
       align-items: center;
       width: 100%;
-      gap: 15px;
+      gap: 10px;
       transition: all $b-transition-sec ease;
     }
 
@@ -175,6 +183,113 @@ body {
         opacity: 0;
         transform: translateX(-100%);
         animation: slide-in 0.5s ease-out forwards;
+      }
+    }
+  }
+}
+
+// HEADER
+.header {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 85%;
+  height: 7.5vh;
+  border-radius: 5px;
+  transition: all $b-transition-sec ease;
+
+  [dir='rtl'] & {
+    right: 10%;
+  }
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 2%;
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      width: 135px;
+    }
+
+    .divider {
+      height: 40px;
+      width: 1px;
+      background-color: $b-border-color;
+    }
+
+    .header-profile-info {
+      .user-info {
+        display: flex;
+        align-items: center;
+        text-align: start;
+        gap: 15px;
+        cursor: pointer;
+
+        .user-email {
+          opacity: 0.9;
+        }
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 20px);
+        right: 15px;
+        width: 200px;
+        min-height: 100px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $b-transition-sec ease;
+
+        [dir='rtl'] & {
+          left: 15px;
+          right: auto;
+        }
+
+        .dropdown-menu-wrapper {
+          display: flex;
+          flex-direction: column;
+          padding: 10px 5px;
+          gap: 5px;
+        }
+      }
+
+      .dropdown-menu::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 14px;
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        z-index: -1;
+
+        [dir='rtl'] & {
+          left: 14px;
+          right: auto;
+        }
+      }
+
+      .dropdown-menu.active {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+
+      .divider {
+        height: 1px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: $b-border-color;
       }
     }
   }

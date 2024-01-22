@@ -1,6 +1,8 @@
-$primary-color: #fff;
-$background-color: #333;
-$text-color: #fff;
+$background-color: #000000;
+$primary-color: #3f3f3f;
+$secondary-color: #2e63f7;
+$accent-color: #e9e9e9;
+$text-color: #e8e8e8;
 
 #root {
   background-color: $background-color;
@@ -11,28 +13,35 @@ $text-color: #fff;
   min-height: 100vh;
 }
 
-.button {
-  padding: 10px 20px;
+.button-theme {
   background-color: $text-color;
   color: $background-color;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
-  transition: 0.3s ease-in-out;
+
   &:hover {
-    background-color: #7bb4f1;
+    background-color: $text-color;
+    opacity: 0.65;
   }
 }
 
-.theme-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
+.side-bar-theme {
+  background-color: $primary-color;
 
-.translate-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  .side-bar-item,
+  .side-bar-item-expanded {
+    color: $accent-color;
+
+    &:hover {
+      color: $accent-color;
+      opacity: 0.65;
+    }
+  }
+
+  .side-bar-item-active {
+    color: $secondary-color;
+
+    &:hover {
+      color: $secondary-color;
+      opacity: 0.65;
+    }
+  }
 }

@@ -1,18 +1,39 @@
 const ar = {
-  login: {
-    title: 'صفحة تسجيل الدخول'
+  dashboard: {
+    title: 'الصفحة الرئيسية'
   },
-  profile: {
-    title: 'الصفحة الشخصية'
+
+  employees: {
+    title: 'صفحة الموظفين'
   },
-  layout: {
-    base: {
-      title: 'النموذج الاساسي'
-    },
-    main: {
-      title: 'النموذج الرئيسي'
-    }
+
+  attendance: {
+    title: 'صفحة الحضور'
   },
+
+  statistics: {
+    title: 'صفحة الاحصائيات'
+  },
+
+  settings: {
+    title: 'صفحة الاعدادات'
+  },
+
+  policies: {
+    title: 'صفحة السياسات'
+  },
+
+  sidebar: {
+    notifications: 'الاشعارات',
+    dashboard: 'اللوحة الرئيسية',
+    employees: 'الموظفين',
+    attendance: 'الحضور',
+    statistics: 'الاحصائيات',
+    settings: 'الاعدادات',
+    policies: 'السياسات',
+    logout: 'تسجيل الخروج'
+  },
+
   snackbar: {
     show: 'اظهار اشعار'
   }

@@ -53,7 +53,7 @@ function SideBar() {
         />
       )}
       <Box className={`side-bar-wrapper ${isHovered ? 'wrapper-expand' : ''}`}>
-        <Box className={`section ${isHovered ? 'section-expand' : ''}`}>
+        <Box className="section">
           <SideBarItem
             id="notifications"
             to=""
@@ -64,8 +64,8 @@ function SideBar() {
           />
           <SideBarDivider isHovered={isHovered} />
         </Box>
-        <Box className={`section ${isHovered ? 'section-expand' : ''}`}>
-          <Box className={`section ${isHovered ? 'section-expand' : ''}`}>
+        <Box className="section">
+          <Box className="section">
             <SideBarItem
               id="dashboard"
               to="/"
@@ -100,7 +100,7 @@ function SideBar() {
             />
           </Box>
           <SideBarDivider isHovered={isHovered} />
-          <Box className={`section ${isHovered ? 'section-expand' : ''}`}>
+          <Box className="section">
             <SideBarItem
               id="settings"
               to="settings"
@@ -119,7 +119,7 @@ function SideBar() {
             />
           </Box>
         </Box>
-        <Box className={`section ${isHovered ? 'section-expand' : ''}`}>
+        <Box className="section">
           <SideBarDivider isHovered={isHovered} />
           <SideBarItem
             id="logout"

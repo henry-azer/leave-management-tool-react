@@ -98,7 +98,8 @@ body {
   }
 
   &.side-bar-expand {
-    width: 140px;
+    width: 150px;
+    padding: 0 20px;
   }
 
   .indicator {
@@ -146,10 +147,6 @@ body {
       width: 100%;
       gap: 15px;
       transition: all $b-transition-sec ease;
-
-      &.section-expand {
-        width: 140px;
-      }
     }
 
     .side-bar-item {
@@ -165,7 +162,6 @@ body {
     }
 
     .side-bar-item-expanded {
-      padding: 0 10%;
       display: grid;
       grid-template-columns: 1fr 3fr;
       transition: all $b-transition-sec ease;

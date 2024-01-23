@@ -4,8 +4,9 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 
 import en from './locales/en'
 import ar from './locales/ar'
+import fr from './locales/fr'
 
 i18next.use(initReactI18next).use(LanguageDetector).init({
   fallbackLng: 'en',
-  resources: { en, ar }
+  resources: { en, ar, fr }
 })

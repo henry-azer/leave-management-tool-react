@@ -1,16 +1,18 @@
+import { Box } from '@mui/material'
+
 import { useTheme } from '../../../services/theme/theme-context'
 
 function ThemeButton() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <button
-      type="button"
-      className="button button-theme theme-button"
-      onClick={toggleTheme}
-    >
-      {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-    </button>
+    <Box className="theme-button theme-button-theme">
+      <input
+        type="checkbox"
+        checked={theme === 'dark'}
+        onChange={toggleTheme}
+      />
+    </Box>
   )
 }
 

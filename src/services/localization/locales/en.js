@@ -16,7 +16,19 @@ const en = {
   },
 
   settings: {
-    title: 'Settings Page'
+    title: 'Settings Page',
+    card: {
+      language: {
+        title: 'Language',
+        description: 'Change Language'
+      },
+      theme: {
+        title: 'Theme',
+        description: 'Change Theme',
+        light: 'Light Theme',
+        dark: ' Dark Theme'
+      }
+    }
   },
 
   policies: {
@@ -48,6 +60,7 @@ const en = {
 
   common: {
     back: 'Back',
+    language: 'Language',
     error: {
       title: 'Error',
       description: 'Ops! Unexpected error happened.',

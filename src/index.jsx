@@ -7,8 +7,6 @@ import { Provider } from 'react-redux'
 import Router from './router/router'
 import store from './configs/redux-store'
 
-import ThemeButton from './components/buttons/theme/theme-button'
-import TranslateButton from './components/buttons/translate/translate-button'
 import { ThemeProvider } from './services/theme/theme-context'
 
 import './configs/axios'
@@ -24,8 +22,6 @@ root.render(
       <SnackbarProvider>
         <Provider store={store}>
           <Router />
-          <ThemeButton />
-          <TranslateButton />
         </Provider>
       </SnackbarProvider>
     </ThemeProvider>

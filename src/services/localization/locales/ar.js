@@ -16,7 +16,19 @@ const ar = {
   },
 
   settings: {
-    title: 'صفحة الاعدادات'
+    title: 'صفحة الاعدادات',
+    card: {
+      language: {
+        title: 'اللغة',
+        description: 'تغيير اللغة'
+      },
+      theme: {
+        title: 'الموضوعات',
+        description: 'تغيير الموضوع',
+        light: 'الموضوع: الخفيف',
+        dark: 'الموضوع : الداكن'
+      }
+    }
   },
 
   policies: {
@@ -48,6 +60,7 @@ const ar = {
 
   common: {
     back: 'الرجوع',
+    language: 'اللغة',
     error: {
       title: 'خطأ',
       description: 'عفوًا! حدث خطأ غير متوقع',

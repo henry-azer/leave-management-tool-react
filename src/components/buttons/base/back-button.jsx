@@ -1,5 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom'
+
 import PropTypes from 'prop-types'
+
 import { Box, Typography } from '@mui/material'
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material'
 
@@ -24,15 +26,13 @@ function BackButton({ text, hasBackButton }) {
       {hasBackButton && (
         <ArrowBackIcon
           sx={{ fontSize: '19px' }}
-          className="cursor-pointer"
+          className="back-button-arrow cursor-pointer"
           onClick={handleBackNavigation}
         />
       )}
-      <Box className="flex flex-column content-center">
-        <Typography variant="h6" component="p">
-          {text}
-        </Typography>
-      </Box>
+      <Typography variant="h6" component="p">
+        {text}
+      </Typography>
     </Box>
   )
 }

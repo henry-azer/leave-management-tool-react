@@ -6,6 +6,7 @@ import React, {
   useMemo
 } from 'react'
 import PropTypes from 'prop-types'
+
 import { THEME } from '../../utils/constants/app-constants'
 import LocalStorageProvider from '../storage/local-storage-provider'
 

@@ -51,7 +51,31 @@ $text-color: #e8e8e8;
   }
 }
 
-// SETTINGS PAGE
+// PAGE ROUTE
 .page-route {
   background-color: $primary-color;
+}
+
+// SETTINGS CARD
+.settings-card-theme {
+  background-color: $primary-color;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 -1px 20px rgba(0, 0, 0, 0.1);
+
+  .circle-icon {
+    background: $background-color;
+    color: $text-color;
+  }
+}
+
+// THEME BUTTON
+.theme-button-theme {
+  input[type='checkbox']:checked {
+    background-color: $background-color;
+  }
+
+  input[type='checkbox']:checked::before {
+    background-color: $text-color;
+  }
 }

@@ -1,5 +1,6 @@
-import React, { Suspense, useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
+
 import { useTranslation } from 'react-i18next'
 
 import { Box } from '@mui/material'
@@ -26,9 +27,11 @@ function MainLayout() {
         onSidebarExpanded={handleSideBarToggle}
       />
       <Header />
-      <Suspense>
-        <Outlet />
-      </Suspense>
+      <Box className="page-route">
+        <Suspense>
+          <Outlet />
+        </Suspense>
+      </Box>
     </Box>
   )
 }

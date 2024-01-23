@@ -44,6 +44,17 @@ const ar = {
 
   snackbar: {
     show: 'اظهار اشعار'
+  },
+
+  common: {
+    back: 'الرجوع',
+    error: {
+      title: 'خطأ',
+      description: 'عفوًا! حدث خطأ غير متوقع',
+      not_found: 'هذه الصفحة غير موجودة',
+      server_error: 'خطأ في الخادم',
+      unknown: 'خطأ غير معروف'
+    }
   }
 }
 

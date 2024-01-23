@@ -1,12 +1,17 @@
 import { useTranslation } from 'react-i18next'
 
+import { Box } from '@mui/material'
+import PageRouteTitle from '../../components/buttons/base/back-button'
+
 function Dashboard() {
   const { t } = useTranslation()
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <div>{t('dashboard:title')}</div>
-    </div>
+    <Box className="dashboard-page dashboard-page-theme">
+      <Box className="dashboard-page-wrapper">
+        <PageRouteTitle title={t('dashboard:title')} hasBackButton={false} />
+      </Box>
+    </Box>
   )
 }
 

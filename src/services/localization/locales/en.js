@@ -44,6 +44,17 @@ const en = {
 
   snackbar: {
     show: 'Show Snackbar'
+  },
+
+  common: {
+    back: 'Back',
+    error: {
+      title: 'Error',
+      description: 'Ops! Unexpected error happened.',
+      not_found: 'Not Found',
+      server_error: 'Server Error',
+      unknown: 'Unknown Error'
+    }
   }
 }
 

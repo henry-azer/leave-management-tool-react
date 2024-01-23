@@ -26,13 +26,16 @@ $b-transition-sec: 0.5s;
 }
 
 * {
-  font-family: 'Century Gothic';
-  font-weight: 300;
+  font-family: 'Lexend', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+.font {
+  font-family: 'Lexend', sans-serif;
 }
 
 .light-theme {
@@ -100,7 +103,8 @@ body {
   &.side-bar-expand {
     width: 150px;
 
-    + .header {
+    ~ .header,
+    ~ .page-route {
       left: 15%;
       width: 80%;
 
@@ -249,6 +253,7 @@ body {
         opacity: 0;
         visibility: hidden;
         transition: opacity $b-transition-sec ease;
+        z-index: 99999;
 
         [dir='rtl'] & {
           left: 15px;
@@ -293,6 +298,32 @@ body {
       }
     }
   }
+}
+
+// ROOT ERROR
+.root-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+// PAGE ROUTE
+.page-route {
+  position: absolute;
+  left: 10%;
+  top: 17%;
+  width: 85%;
+  height: 78vh;
+  padding: 25px;
+  border-radius: 5px;
+  transition: all $b-transition-sec ease;
+}
+
+// SETTINGS CARD
+.settings-card {
+  width: 240px;
+  height: 200px;
 }
 
 /* -------------------------------------------------------- */

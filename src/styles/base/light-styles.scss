@@ -53,3 +53,17 @@ $text-color: #000000;
     background: $primary-color;
   }
 }
+
+// SETTINGS PAGE
+.page-route {
+  background-color: $primary-color;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+// SETTINGS CARD
+.settings-card-theme {
+  background-color: $primary-color;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 -1px 20px rgba(0, 0, 0, 0.1);
+}

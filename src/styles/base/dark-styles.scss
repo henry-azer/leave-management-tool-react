@@ -44,6 +44,7 @@ $text-color: #e8e8e8;
 
   .dropdown-menu {
     background: $primary-color;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
   .dropdown-menu::before {

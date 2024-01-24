@@ -24,6 +24,7 @@ import SideBarDivider from './base/side-bar-divider'
 function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
   const { t } = useTranslation()
   const location = useLocation()
+  const [indicatorTop, setIndicatorTop] = useState(0)
   const [selectedIcon, setSelectedIcon] = useState('')
   const [isSidebarHovered, setIsSidebarHovered] = useState(isSidebarExpanded)
 
@@ -31,6 +32,24 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
     const pathname = location.pathname.substring(1)
     setSelectedIcon(pathname || 'dashboard')
   }, [location.pathname])
+
+  useEffect(() => {
+    const updateIndicatorPosition = () => {
+      if (selectedIcon) {
+        const iconElement = document.getElementById(selectedIcon)
+        if (iconElement) {
+          setIndicatorTop(iconElement.offsetTop + 3)
+        }
+      }
+    }
+
+    updateIndicatorPosition()
+    window.addEventListener('resize', updateIndicatorPosition)
+
+    return () => {
+      window.removeEventListener('resize', updateIndicatorPosition)
+    }
+  }, [selectedIcon])
 
   const handleMouseEnter = () => {
     setIsSidebarHovered(true)
@@ -52,8 +71,8 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
         <div
           className="indicator"
           style={{
-            top: `${document.getElementById(selectedIcon) != null ? document.getElementById(selectedIcon).offsetTop + 3 : 0}px`,
-            display: `${document.getElementById(selectedIcon) != null ? 'block' : 'none'}`
+            top: `${indicatorTop}px`,
+            display: `${indicatorTop !== 0 ? 'block' : 'none'}`
           }}
         />
       )}

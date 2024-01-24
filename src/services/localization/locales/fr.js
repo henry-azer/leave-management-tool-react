@@ -34,17 +34,17 @@ const fr = {
   policies: {
     title: 'Politiques',
     card: {
-      1: {
+      empowerment: {
         title: 'Autonomisation et Inclusion',
         description:
           "Nous célébrons la diversité et l'inclusivité, favorisant un environnement où chaque individu se sent valorisé, entendu et habilité. Notre succès repose sur la force de nos perspectives diverses et une culture inclusive."
       },
-      2: {
+      collaborative: {
         title: 'Synergie Collaborative',
         description:
           "Nous croyons en la puissance de la collaboration, où des perspectives diverses convergent pour créer une force synergique. Notre travail d'équipe prospère grâce à une communication ouverte, un respect mutuel et l'engagement partagé à atteindre des objectifs communs."
       },
-      3: {
+      pioneering: {
         title: 'Ingéniosité Pionnière',
         description:
           "Nous encourageons une culture d'innovation continue, incitant notre équipe à penser de manière créative, à embrasser le changement et à pionnier des solutions révolutionnaires qui redéfinissent les normes de l'industrie."

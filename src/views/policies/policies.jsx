@@ -21,18 +21,18 @@ function Policies() {
       <Box className="policies-page-wrapper overflow-auto flex-1">
         <Box className="flex flex-col gap-4 p-6">
           <PoliciesCard
-            title={t('policies:card:1:title')}
-            description={t('policies:card:2:description')}
+            title={t('policies:card:empowerment:title')}
+            description={t('policies:card:empowerment:description')}
             icon={<WebhookIcon />}
           />
           <PoliciesCard
-            title={t('policies:card:2:title')}
-            description={t('policies:card:2:description')}
+            title={t('policies:card:collaborative:title')}
+            description={t('policies:card:collaborative:description')}
             icon={<HandshakeIcon />}
           />
           <PoliciesCard
-            title={t('policies:card:3:title')}
-            description={t('policies:card:3:description')}
+            title={t('policies:card:pioneering:title')}
+            description={t('policies:card:pioneering:description')}
             icon={<HeartInHandIcon />}
           />
         </Box>

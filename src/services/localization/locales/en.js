@@ -34,17 +34,17 @@ const en = {
   policies: {
     title: 'Policies',
     card: {
-      1: {
+      empowerment: {
         title: 'Empowerment and Inclusion',
         description:
           'We celebrate diversity and inclusivity, fostering an environment where every individual feels valued, heard, and empowered. Our success is built on the strength of our diverse perspectives and inclusive culture.'
       },
-      2: {
+      collaborative: {
         title: 'Collaborative Synergy',
         description:
           'We believe in the power of collaboration, where diverse perspectives converge to create a synergistic force. Our teamwork thrives on open communication, mutual respect, and the shared commitment to achieving common goals.'
       },
-      3: {
+      pioneering: {
         title: 'Pioneering Ingenuity',
         description:
           'We foster a culture of continuous innovation, encouraging our team to think creatively, embrace change, and pioneer groundbreaking solutions that redefine industry standards.'

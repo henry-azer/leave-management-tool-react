@@ -21,7 +21,7 @@ function Settings() {
     <Box className="settings-page settings-page-theme flex flex-col w-full h-full">
       <BackButton text={t('settings:title')} hasBackButton />
       <Box className="settings-page-wrapper overflow-auto flex-1">
-        <Box className="flex flex-wrap gap-5 p-6">
+        <Box className="cards-wrapper flex flex-wrap gap-5 p-6">
           <SettingsCard
             title={t('settings:card:language:title')}
             description={t('settings:card:language:description')}

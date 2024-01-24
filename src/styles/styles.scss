@@ -315,8 +315,9 @@ body {
 
 // SETTINGS CARD
 .settings-card {
-  width: 240px;
-  height: 160px;
+  width: 100%;
+  max-width: 240px;
+  height: 165px;
 
   .circle-icon {
     display: flex;
@@ -436,6 +437,13 @@ body {
       align-items: center;
       padding: 35px;
     }
+  }
+}
+
+@media (max-width: 710px) {
+  .settings-card {
+    width: 100%;
+    max-width: none;
   }
 }
 

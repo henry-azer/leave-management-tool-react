@@ -18,35 +18,31 @@ function Settings() {
   const { theme } = useTheme()
 
   return (
-    <Box className="settings-page settings-page-theme">
-      <Box className="settings-page-wrapper">
-        <BackButton text={t('settings:title')} hasBackButton />
-        <Box className="flex flex-wrap gap-4 p-5">
+    <Box className="settings-page settings-page-theme flex flex-col w-full h-full">
+      <BackButton text={t('settings:title')} hasBackButton />
+      <Box className="settings-page-wrapper overflow-auto flex-1">
+        <Box className="flex flex-wrap gap-5 p-6">
           <SettingsCard
             title={t('settings:card:language:title')}
             description={t('settings:card:language:description')}
             icon={<LanguageIcon />}
           >
-            <Box className="flex justify-between items-center px-5">
-              <Typography variant="subtitle1" component="p">
-                {t('settings:card:language:title')}
-              </Typography>
-              <TranslateButton />
-            </Box>
+            <Typography variant="subtitle1" component="p">
+              {t('settings:card:language:title')}
+            </Typography>
+            <TranslateButton />
           </SettingsCard>
           <SettingsCard
             title={t('settings:card:theme:title')}
             description={t('settings:card:theme:description')}
             icon={<ThemeIcon />}
           >
-            <Box className="flex justify-between items-center px-5 py-1">
-              <Typography variant="subtitle1" component="p">
-                {theme === 'dark'
-                  ? t('settings:card:theme:dark')
-                  : t('settings:card:theme:light')}
-              </Typography>
-              <ThemeButton />
-            </Box>
+            <Typography variant="subtitle1" component="p">
+              {theme === 'dark'
+                ? t('settings:card:theme:dark')
+                : t('settings:card:theme:light')}
+            </Typography>
+            <ThemeButton />
           </SettingsCard>
         </Box>
       </Box>

@@ -3,6 +3,10 @@ import ar from './ar'
 import fr from './fr'
 
 const Locales = {
+  fr: {
+    name: 'French',
+    locale: fr
+  },
   en: {
     name: 'English',
     locale: en
@@ -10,10 +14,6 @@ const Locales = {
   ar: {
     name: 'العربية',
     locale: ar
-  },
-  fr: {
-    name: 'French',
-    locale: fr
   }
 }
 

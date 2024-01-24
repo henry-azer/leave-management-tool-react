@@ -73,6 +73,14 @@ $text-color: #000000;
   }
 }
 
+// POLICIES CARD
+.policies-card-theme {
+  .circle-icon {
+    background: $background-color;
+    color: $text-color;
+  }
+}
+
 // THEME BUTTON
 .theme-button-theme {
   input[type='checkbox'] {

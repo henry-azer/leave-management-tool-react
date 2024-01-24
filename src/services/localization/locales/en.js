@@ -1,22 +1,22 @@
 const en = {
   dashboard: {
-    title: 'Home Page'
+    title: 'Home'
   },
 
   employees: {
-    title: 'Employees Page'
+    title: 'Employees'
   },
 
   attendance: {
-    title: 'Attendance Page'
+    title: 'Attendance'
   },
 
   statistics: {
-    title: 'Statistics Page'
+    title: 'Statistics'
   },
 
   settings: {
-    title: 'Settings Page',
+    title: 'Settings',
     card: {
       language: {
         title: 'Language',
@@ -32,7 +32,24 @@ const en = {
   },
 
   policies: {
-    title: 'Policies Page'
+    title: 'Policies',
+    card: {
+      1: {
+        title: 'Empowerment and Inclusion',
+        description:
+          'We celebrate diversity and inclusivity, fostering an environment where every individual feels valued, heard, and empowered. Our success is built on the strength of our diverse perspectives and inclusive culture.'
+      },
+      2: {
+        title: 'Collaborative Synergy',
+        description:
+          'We believe in the power of collaboration, where diverse perspectives converge to create a synergistic force. Our teamwork thrives on open communication, mutual respect, and the shared commitment to achieving common goals.'
+      },
+      3: {
+        title: 'Pioneering Ingenuity',
+        description:
+          'We foster a culture of continuous innovation, encouraging our team to think creatively, embrace change, and pioneer groundbreaking solutions that redefine industry standards.'
+      }
+    }
   },
 
   sidebar: {

@@ -316,8 +316,10 @@ body {
 // SETTINGS CARD
 .settings-card {
   width: 100%;
-  max-width: 240px;
+  max-width: 280px;
+  min-width: 240px;
   height: 165px;
+  border-radius: 10px;
 
   .circle-icon {
     display: flex;
@@ -330,6 +332,62 @@ body {
   }
 }
 
+// DASHBOARD CARD
+.dashboard-card {
+  width: 100%;
+  max-width: 285px;
+  min-width: 220px;
+  border-radius: 10px;
+
+  .circle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+}
+
+// WEATHER CARD
+.weather-card {
+  width: 100%;
+  max-width: 280px;
+  min-width: 280px;
+  height: 330px;
+  border-radius: 10px;
+
+  .weather-card-wrapper {
+    .divider {
+      height: 1px;
+      width: 70%;
+      background-color: $b-border-color;
+      transition: all $b-transition-sec ease;
+    }
+
+    .circle-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .weather-icon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: fit-content;
+      height: 25px;
+      border-radius: 15px;
+      padding: 0 10px;
+    }
+  }
+}
+
 // THEME BUTTON
 .theme-button {
   input[type='checkbox'] {
@@ -339,6 +397,7 @@ body {
     width: 60px;
     height: 30px;
     border-radius: 20px;
+    color: $b-secondary-color;
     transition: all $b-transition-sec ease;
   }
 
@@ -368,11 +427,19 @@ body {
   }
 }
 
-// BACK BUTTOn
+// BACK BUTTON
 .back-button-arrow {
   [dir='rtl'] & {
     transform: rotate(180deg);
   }
+}
+
+// DASHBOARD PAGE
+.dashboard-page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: start;
 }
 
 // POLICIES PAGE
@@ -440,11 +507,37 @@ body {
   }
 }
 
-@media (max-width: 710px) {
-  .settings-card {
-    width: 100%;
-    max-width: none;
+@media (max-width: 940px) {
+}
+
+@media (max-width: 800px) {
+  .settings-page-wrapper {
+    .cards-wrapper {
+      justify-content: center;
+    }
   }
+
+  .dashboard-page-wrapper {
+    .cards-wrapper {
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .cards-inner-wrapper {
+        justify-content: center;
+      }
+    }
+  }
+
+  .dashboard-card,
+  .settings-card {
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 710px) {
 }
 
 /* -------------- ANIMATIONS START------------------------- */

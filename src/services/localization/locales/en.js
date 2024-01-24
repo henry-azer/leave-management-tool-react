@@ -1,6 +1,38 @@
 const en = {
   dashboard: {
-    title: 'Home'
+    weather: {
+      title: 'Weather',
+      error: 'Unable to load weather data!',
+      wind: {
+        unit: 'km/h'
+      }
+    },
+    card: {
+      employees: {
+        title: 'Total Employees',
+        description: 'Total system employees.'
+      },
+      attendance: {
+        title: 'Attendance',
+        description: 'Total attendees today.'
+      },
+      absent: {
+        title: 'Absent',
+        description: 'Total absences today.'
+      },
+      onTime: {
+        title: 'On Time',
+        description: 'Monitor punctuality.'
+      },
+      late: {
+        title: 'Late Arrival',
+        description: 'Track late arrivals.'
+      },
+      early: {
+        title: 'Early Departures',
+        description: 'Track early departures.'
+      }
+    }
   },
 
   employees: {

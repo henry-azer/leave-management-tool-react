@@ -1,6 +1,38 @@
 const fr = {
   dashboard: {
-    title: 'Accueil'
+    weather: {
+      title: 'Météo',
+      error: 'Impossible de charger les données météorologiques !',
+      wind: {
+        unit: 'km/h'
+      }
+    },
+    card: {
+      employees: {
+        title: 'Total des employés',
+        description: 'Total des employés du système.'
+      },
+      attendance: {
+        title: 'Présence',
+        description: "Total des participants aujourd'hui."
+      },
+      absent: {
+        title: 'Total des absences',
+        description: "Total des absences aujourd'hui."
+      },
+      onTime: {
+        title: "À l'heure",
+        description: 'Surveiller la ponctualité.'
+      },
+      late: {
+        title: 'Arrivée tardive',
+        description: "Suivre les retards à l'arrivée."
+      },
+      early: {
+        title: 'Départs anticipés',
+        description: 'Suivre les départs anticipés.'
+      }
+    }
   },
 
   employees: {

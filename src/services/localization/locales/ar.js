@@ -1,6 +1,38 @@
 const ar = {
   dashboard: {
-    title: 'الرئيسية'
+    weather: {
+      title: 'الطقس',
+      error: 'تعذر تحميل بيانات الطقس!',
+      wind: {
+        unit: 'كم/س'
+      }
+    },
+    card: {
+      employees: {
+        title: 'إجمالي الموظفين',
+        description: 'إجمالي موظفي النظام.'
+      },
+      attendance: {
+        title: 'الحضور',
+        description: 'إجمالي الحاضرين اليوم.'
+      },
+      absent: {
+        title: 'إجمالي الغياب',
+        description: 'إجمالي الغياب اليوم.'
+      },
+      onTime: {
+        title: 'في الوقت المحدد',
+        description: 'رصد الانضباط الزمني.'
+      },
+      late: {
+        title: 'تأخر في الوصول',
+        description: 'تتبع التأخير في الوصول.'
+      },
+      early: {
+        title: 'مغادرة مبكرة',
+        description: 'تتبع المغادرات المبكرة.'
+      }
+    }
   },
 
   employees: {

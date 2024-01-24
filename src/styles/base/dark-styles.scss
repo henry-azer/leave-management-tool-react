@@ -63,19 +63,25 @@ $text-color: #e8e8e8;
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.2),
     0 -1px 20px rgba(0, 0, 0, 0.1);
-
-  .circle-icon {
-    background: $background-color;
-    color: $text-color;
-  }
 }
 
-// POLICIES CARD
-.policies-card-theme {
-  .circle-icon {
-    background: $background-color;
-    color: $text-color;
-  }
+// DASHBOARD CARD
+.dashboard-card-theme {
+  background-color: $primary-color;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 -1px 20px rgba(0, 0, 0, 0.1);
+}
+
+// ICONS
+.weather-icon,
+.circle-icon {
+  background: $background-color;
+  color: $secondary-color;
+}
+
+.weather-icon-text {
+  color: $text-color;
 }
 
 // THEME BUTTON

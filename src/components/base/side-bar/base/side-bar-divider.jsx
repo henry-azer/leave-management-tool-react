@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 function SideBarDivider({ isHovered }) {
-  return <div className={`divider ${isHovered ? 'divider-expand' : ''}`} />
+  return <div className={`divider ${isHovered ? 'divider-expanded' : ''}`} />
 }
 
 SideBarDivider.propTypes = {

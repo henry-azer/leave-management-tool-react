@@ -107,7 +107,7 @@ function WeatherCard() {
           </Box>
         ) : (
           <Box className="flex flex-col items-center gap-5 flex-1">
-            <Box className="flex flex-col gap-1">
+            <Box className="flex flex-col items-center gap-1">
               <Box className="flex items-end justify-between gap-2">
                 <Box className="flex items-center gap-1">
                   <LocationIcon />

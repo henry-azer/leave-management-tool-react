@@ -12,6 +12,7 @@
     "axios-delay": "^1.0.0-rc6",
     "chart.js": "^4.4.1",
     "formik": "^2.4.5",
+    "hamburger-react": "^2.5.0",
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
     "notistack": "^3.0.1",

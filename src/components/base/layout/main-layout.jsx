@@ -10,6 +10,7 @@ import Header from '../header/header'
 
 function MainLayout() {
   const { i18n } = useTranslation()
+  const [isResSideBarOpen, setResSideBarOpen] = useState(false)
   const [isSideBarExpanded, setIsSideBarExpanded] = useState(false)
 
   useEffect(() => {
@@ -20,13 +21,21 @@ function MainLayout() {
     setIsSideBarExpanded(!isSideBarExpanded)
   }
 
+  const handleResSideBarOpen = () => {
+    setResSideBarOpen(!isResSideBarOpen)
+  }
+
   return (
     <Box>
       <SideBar
+        isResSideBarOpen={isResSideBarOpen}
         isSidebarExpanded={isSideBarExpanded}
         onSidebarExpanded={handleSideBarToggle}
       />
-      <Header />
+      <Header
+        isResSideBarOpen={isResSideBarOpen}
+        setResSideBarOpen={handleResSideBarOpen}
+      />
       <Box className="page-route">
         <Suspense>
           <Outlet />

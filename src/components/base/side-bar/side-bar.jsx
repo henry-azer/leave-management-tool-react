@@ -21,12 +21,11 @@ import {
 import SideBarItem from './base/side-bar-item'
 import SideBarDivider from './base/side-bar-divider'
 
-function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
+function SideBar({ isResSideBarOpen, isSidebarExpanded, onSidebarExpanded }) {
   const { t } = useTranslation()
   const location = useLocation()
   const [indicatorTop, setIndicatorTop] = useState(0)
   const [selectedIcon, setSelectedIcon] = useState('')
-  const [isSidebarHovered, setIsSidebarHovered] = useState(isSidebarExpanded)
 
   useEffect(() => {
     const pathname = location.pathname.substring(1)
@@ -52,18 +51,16 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
   }, [selectedIcon])
 
   const handleMouseEnter = () => {
-    setIsSidebarHovered(true)
     onSidebarExpanded()
   }
 
   const handleMouseLeave = () => {
-    setIsSidebarHovered(false)
     onSidebarExpanded()
   }
 
   return (
     <Box
-      className={`side-bar side-bar-theme ${isSidebarExpanded ? 'side-bar-expand' : ''}`}
+      className={`side-bar side-bar-theme ${isSidebarExpanded ? 'side-bar-expanded' : ''} ${isResSideBarOpen ? 'side-bar-open' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -77,18 +74,18 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
         />
       )}
       <Box
-        className={`side-bar-wrapper ${isSidebarHovered ? 'wrapper-expand' : ''}`}
+        className={`side-bar-wrapper ${isSidebarExpanded || isResSideBarOpen ? 'wrapper-expanded' : ''}`}
       >
         <Box className="section">
           <SideBarItem
             id="notifications"
             to=""
             selectedIcon={selectedIcon}
-            isHovered={isSidebarHovered}
+            isHovered={isSidebarExpanded || isResSideBarOpen}
             icon={<NotificationIcon />}
             label={t('sidebar:notifications')}
           />
-          <SideBarDivider isHovered={isSidebarHovered} />
+          <SideBarDivider isHovered={isSidebarExpanded || isResSideBarOpen} />
         </Box>
         <Box className="section">
           <Box className="section">
@@ -96,7 +93,7 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
               id="dashboard"
               to="/"
               selectedIcon={selectedIcon}
-              isHovered={isSidebarHovered}
+              isHovered={isSidebarExpanded || isResSideBarOpen}
               icon={<DashboardIcon />}
               label={t('sidebar:dashboard')}
             />
@@ -104,7 +101,7 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
               id="employees"
               to="/employees"
               selectedIcon={selectedIcon}
-              isHovered={isSidebarHovered}
+              isHovered={isSidebarExpanded || isResSideBarOpen}
               icon={<PersonIcon />}
               label={t('sidebar:employees')}
             />
@@ -112,7 +109,7 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
               id="attendance"
               to="/attendance"
               selectedIcon={selectedIcon}
-              isHovered={isSidebarHovered}
+              isHovered={isSidebarExpanded || isResSideBarOpen}
               icon={<CalendarIcon />}
               label={t('sidebar:attendance')}
             />
@@ -120,18 +117,18 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
               id="statistics"
               to="statistics"
               selectedIcon={selectedIcon}
-              isHovered={isSidebarHovered}
+              isHovered={isSidebarExpanded || isResSideBarOpen}
               icon={<StatsIcon />}
               label={t('sidebar:statistics')}
             />
           </Box>
-          <SideBarDivider isHovered={isSidebarHovered} />
+          <SideBarDivider isHovered={isSidebarExpanded || isResSideBarOpen} />
           <Box className="section">
             <SideBarItem
               id="settings"
               to="settings"
               selectedIcon={selectedIcon}
-              isHovered={isSidebarHovered}
+              isHovered={isSidebarExpanded || isResSideBarOpen}
               icon={<SettingsIcon />}
               label={t('sidebar:settings')}
             />
@@ -139,19 +136,19 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
               id="policies"
               to="policies"
               selectedIcon={selectedIcon}
-              isHovered={isSidebarHovered}
+              isHovered={isSidebarExpanded || isResSideBarOpen}
               icon={<SecurityIcon />}
               label={t('sidebar:policies')}
             />
           </Box>
         </Box>
         <Box className="section">
-          <SideBarDivider isHovered={isSidebarHovered} />
+          <SideBarDivider isHovered={isSidebarExpanded || isResSideBarOpen} />
           <SideBarItem
             id="logout"
             to=""
             selectedIcon={selectedIcon}
-            isHovered={isSidebarHovered}
+            isHovered={isSidebarExpanded || isResSideBarOpen}
             icon={<LogoutIcon />}
             label={t('sidebar:logout')}
           />
@@ -162,6 +159,7 @@ function SideBar({ isSidebarExpanded, onSidebarExpanded }) {
 }
 
 SideBar.propTypes = {
+  isResSideBarOpen: PropTypes.bool.isRequired,
   isSidebarExpanded: PropTypes.bool.isRequired,
   onSidebarExpanded: PropTypes.func.isRequired
 }

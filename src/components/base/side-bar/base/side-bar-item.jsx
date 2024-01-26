@@ -9,13 +9,13 @@ function SideBarItem({ id, to, selectedIcon, isHovered, icon, label }) {
   return (
     <NavLink id={id} to={to} className="prevent-drag">
       <MenuItem
-        className={`${selectedIcon === id ? 'side-bar-item-active' : ''} ${isHovered ? 'side-bar-item-expanded' : 'side-bar-item'}`}
+        className={`${selectedIcon === id ? 'side-bar-item-active' : ''} ${isHovered ? 'side-bar-item-expandeded' : 'side-bar-item'}`}
       >
         {React.cloneElement(icon)}
         <Typography
           variant="body2"
           component="p"
-          className={`${isHovered ? 'slide-item-expanded' : 'slide-item-text-hidden'} slide-item-text`}
+          className={`${isHovered ? 'slide-item-expandeded' : 'slide-item-text-hidden'} slide-item-text`}
         >
           {label}
         </Typography>

@@ -19,31 +19,33 @@ function Settings() {
 
   return (
     <Box className="settings-page settings-page-theme flex flex-col w-full h-full">
-      <BackButton text={t('settings:title')} hasBackButton />
-      <Box className="settings-page-wrapper overflow-auto flex-1">
-        <Box className="cards-wrapper flex flex-wrap gap-5 p-6">
-          <SettingsCard
-            title={t('settings:card:language:title')}
-            description={t('settings:card:language:description')}
-            icon={<LanguageIcon />}
-          >
-            <Typography variant="subtitle1" component="p">
-              {t('settings:card:language:title')}
-            </Typography>
-            <TranslateButton />
-          </SettingsCard>
-          <SettingsCard
-            title={t('settings:card:theme:title')}
-            description={t('settings:card:theme:description')}
-            icon={<ThemeIcon />}
-          >
-            <Typography variant="subtitle1" component="p">
-              {theme === 'dark'
-                ? t('settings:card:theme:dark')
-                : t('settings:card:theme:light')}
-            </Typography>
-            <ThemeButton />
-          </SettingsCard>
+      <Box className="settings-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-7">
+        <BackButton text={t('settings:title')} hasBackButton />
+        <Box className="settings-inner-wrapper">
+          <Box className="cards-wrapper flex flex-wrap gap-5 p-6">
+            <SettingsCard
+              title={t('settings:card:language:title')}
+              description={t('settings:card:language:description')}
+              icon={<LanguageIcon />}
+            >
+              <Typography variant="subtitle1" component="p">
+                {t('settings:card:language:title')}
+              </Typography>
+              <TranslateButton />
+            </SettingsCard>
+            <SettingsCard
+              title={t('settings:card:theme:title')}
+              description={t('settings:card:theme:description')}
+              icon={<ThemeIcon />}
+            >
+              <Typography variant="subtitle1" component="p">
+                {theme === 'dark'
+                  ? t('settings:card:theme:dark')
+                  : t('settings:card:theme:light')}
+              </Typography>
+              <ThemeButton />
+            </SettingsCard>
+          </Box>
         </Box>
       </Box>
     </Box>

@@ -32,6 +32,16 @@ const fr = {
         title: 'Départs anticipés',
         description: 'Suivre les départs anticipés.'
       }
+    },
+    chart: {
+      attendance: {
+        today: {
+          title: "Statistiques de présence aujourd'hui"
+        },
+        year: {
+          title: 'Statistiques de présence annuelles'
+        }
+      }
     }
   },
 

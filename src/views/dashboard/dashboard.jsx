@@ -8,20 +8,23 @@ import {
   AccessTimeOutlined as OnTimeIcon,
   DepartureBoardOutlined as LateIcon
 } from '@mui/icons-material'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 import WeatherCard from '../../components/cards/weather-card'
 import DashboardCard from '../../components/cards/dashboard-card'
+
+import DashboardBarChart from '../../components/charts/dashboard-bar-chart'
+import DashboardPolarChart from '../../components/charts/dashboard-polar-chart'
 
 function Dashboard() {
   const { t } = useTranslation()
 
   return (
-    <Box className="dashboard-page dashboard-page-theme flex flex-col w-full h-full ">
-      <Box className="dashboard-page-wrapper overflow-auto flex-1 p-4">
-        <Box className="cards-wrapper flex gap-8 w-full">
+    <Box className="dashboard-page dashboard-page-theme flex flex-col w-full h-full">
+      <Box className="dashboard-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-10">
+        <Box className="cards-wrapper flex justify-between gap-12">
           <WeatherCard />
-          <Box className="cards-inner-wrapper flex flex-wrap gap-6">
+          <Box className="cards-inner-wrapper">
             <DashboardCard
               count={6127}
               title={t('dashboard:card:employees:title')}
@@ -58,6 +61,20 @@ function Dashboard() {
               description={t('dashboard:card:early:description')}
               icon={<EarlyIcon />}
             />
+          </Box>
+        </Box>
+        <Box className="charts-wrapper mt-12 mb-2">
+          <Box className="chart-card chart-card-theme flex flex-col items-center justify-around">
+            <Typography className="" variant="subtitle1" component="p">
+              {t('dashboard:chart:attendance:year:title')}
+            </Typography>
+            <DashboardBarChart />
+          </Box>
+          <Box className="chart-card chart-card-theme flex flex-col items-center justify-around">
+            <Typography className="" variant="subtitle1" component="p">
+              {t('dashboard:chart:attendance:today:title')}
+            </Typography>
+            <DashboardPolarChart />
           </Box>
         </Box>
       </Box>

@@ -13,6 +13,17 @@ $text-color: #e8e8e8;
   min-height: 100vh;
 }
 
+// SCROLL BAR
+::-webkit-scrollbar-track {
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #181717;
+	border-radius: 10px;
+}
+
 // BUTTONS
 .button-theme {
   background-color: $text-color;
@@ -57,16 +68,10 @@ $text-color: #e8e8e8;
   background-color: $primary-color;
 }
 
-// SETTINGS CARD
+// CARDS
+.dashboard-card-theme,
+.chart-card-theme,
 .settings-card-theme {
-  background-color: $primary-color;
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.2),
-    0 -1px 20px rgba(0, 0, 0, 0.1);
-}
-
-// DASHBOARD CARD
-.dashboard-card-theme {
   background-color: $primary-color;
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.2),

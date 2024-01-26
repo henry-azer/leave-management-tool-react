@@ -22,7 +22,9 @@ $b-border-color: #868585;
 $b-transition-sec: 0.5s;
 
 ::-webkit-scrollbar {
-  display: none;
+  right: -10px;
+  width: 8px;
+  height: 8px;
 }
 
 * {
@@ -304,87 +306,11 @@ body {
   top: 17%;
   width: 85%;
   height: 78vh;
-  padding: 25px;
   border-radius: 5px;
   transition: all $b-transition-sec ease;
 
   [dir='rtl'] & {
     right: 10%;
-  }
-}
-
-// SETTINGS CARD
-.settings-card {
-  width: 100%;
-  max-width: 280px;
-  min-width: 240px;
-  height: 165px;
-  border-radius: 10px;
-
-  .circle-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    padding: 6px;
-    border-radius: 50%;
-  }
-}
-
-// DASHBOARD CARD
-.dashboard-card {
-  width: 100%;
-  max-width: 285px;
-  min-width: 220px;
-  border-radius: 10px;
-
-  .circle-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 50%;
-  }
-}
-
-// WEATHER CARD
-.weather-card {
-  width: 100%;
-  max-width: 280px;
-  min-width: 280px;
-  height: 330px;
-  border-radius: 10px;
-
-  .weather-card-wrapper {
-    .divider {
-      height: 1px;
-      width: 70%;
-      background-color: $b-border-color;
-      transition: all $b-transition-sec ease;
-    }
-
-    .circle-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-    }
-
-    .weather-icon {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      width: fit-content;
-      height: 25px;
-      border-radius: 15px;
-      padding: 0 10px;
-    }
   }
 }
 
@@ -440,38 +366,134 @@ body {
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: start;
+
+  .cards-inner-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    min-width: 220px;
+    max-height: 180px;
+    border-radius: 10px;
+
+    .circle-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      border-radius: 50%;
+    }
+  }
+
+  // WEATHER CARD
+  .weather-card {
+    width: 100%;
+    max-width: 280px;
+    min-width: 280px;
+    height: 330px;
+    border-radius: 10px;
+
+    .weather-card-wrapper {
+      .divider {
+        height: 1px;
+        width: 70%;
+        background-color: $b-border-color;
+        transition: all $b-transition-sec ease;
+      }
+
+      .circle-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+
+      .weather-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: fit-content;
+        height: 25px;
+        border-radius: 15px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .charts-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .chart-card {
+    width: 90%;
+    max-height: 450px;
+    min-height: 400px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+}
+
+// SETTINGS PAGE
+.settings-inner-wrapper {
+  .settings-card {
+    width: 100%;
+    max-width: 280px;
+    min-width: 240px;
+    height: 165px;
+    border-radius: 10px;
+
+    .circle-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 6px;
+      border-radius: 50%;
+    }
+  }
 }
 
 // POLICIES PAGE
-.policies-page-wrapper {
+.policies-inner-wrapper {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.4fr;
   justify-content: center;
   align-items: center;
 
   .core-values {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
     padding: 10px;
 
     img {
       width: 440px;
     }
   }
-}
 
-// POLICIES CARD
-.policies-card-wrapper {
-  .circle-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    padding: 6px;
-    border-radius: 50%;
+  .policies-card-wrapper {
+    .circle-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      padding: 6px;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -496,48 +518,79 @@ body {
 @media only screen and (max-width: 1000px) {
 }
 
-@media screen and (max-width: 1000px) {
-  .policies-page-wrapper {
-    grid-template-columns: 1fr;
-
-    .core-values {
-      align-items: center;
-      padding: 35px;
-    }
-  }
-}
-
-@media (max-width: 940px) {
-}
-
-@media (max-width: 800px) {
-  .settings-page-wrapper {
-    .cards-wrapper {
-      justify-content: center;
-    }
-  }
-
+@media screen and (max-width: 1250px) {
   .dashboard-page-wrapper {
     .cards-wrapper {
       justify-content: center;
       flex-wrap: wrap;
+    }
 
-      .cards-inner-wrapper {
-        justify-content: center;
-      }
+    .dashboard-card {
+      max-width: 380px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .dashboard-page-wrapper {
+    .cards-inner-wrapper {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .dashboard-page-wrapper {
+    .charts-wrapper {
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
   }
 
-  .dashboard-card,
-  .settings-card {
-    max-width: 380px;
+  .policies-inner-wrapper {
+    grid-template-columns: 1fr;
+
+    .core-values {
+      padding: 25px;
+    }
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 800px) {
+  .settings-inner-wrapper {
+    .cards-wrapper {
+      justify-content: center;
+    }
+
+    .settings-card {
+      max-width: 380px;
+    }
+  }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 768px) {
+  .dashboard-page-wrapper {
+    .cards-inner-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .chart-card {
+      min-height: 200px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-page-wrapper {
+    .cards-inner-wrapper {
+      grid-template-columns: 1fr;
+    }
+    
+    .chart-card {
+      padding: 6px;
+    }
+  }
 }
 
 /* -------------- ANIMATIONS START------------------------- */

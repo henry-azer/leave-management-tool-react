@@ -32,6 +32,16 @@ const en = {
         title: 'Early Departures',
         description: 'Track early departures.'
       }
+    },
+    chart: {
+      attendance: {
+        today: {
+          title: 'Today Attendance Stats'
+        },
+        year: {
+          title: 'Yearly Attendance Stats'
+        }
+      }
     }
   },
 

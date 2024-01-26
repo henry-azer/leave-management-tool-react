@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next'
 import axios from 'axios'
 
 import {
-  WaterOutlined as HumidityIcon,
   LocationOnOutlined as LocationIcon,
   AirOutlined as WindIcon
 } from '@mui/icons-material'
 import { Box, Typography } from '@mui/material'
+import { WiHumidity as HumidityIcon } from 'react-icons/wi'
 
 import ErrorImage from '../../assets/images/error.png'
 import { WEATHER_APIKEY } from '../../utils/constants/app-constants'
@@ -106,9 +106,9 @@ function WeatherCard() {
             />
           </Box>
         ) : (
-          <Box className="flex flex-col items-center gap-5 overflow-auto flex-1">
-            <Box className="flex flex-col gap-2">
-              <Box className="flex items-center justify-between">
+          <Box className="flex flex-col items-center gap-5 flex-1">
+            <Box className="flex flex-col gap-1">
+              <Box className="flex items-end justify-between gap-2">
                 <Box className="flex items-center gap-1">
                   <LocationIcon />
                   <Typography variant="h5" component="p">
@@ -124,7 +124,7 @@ function WeatherCard() {
               </Typography>
             </Box>
             <Divider />
-            <Box className="flex flex-col gap-4 justify-center items-center overflow-auto flex-1 h-full w-full">
+            <Box className="flex flex-col gap-4 justify-center items-center flex-1 h-full w-full">
               <Box className="flex justify-center items-center gap-4">
                 <img
                   className="circle-icon"
@@ -148,7 +148,7 @@ function WeatherCard() {
             <Divider />
             <Box className="flex justify-around gap-4 w-full">
               <Box className="weather-icon">
-                <HumidityIcon />
+                <HumidityIcon size="26px" />
                 <Typography
                   className="weather-icon-text"
                   variant="body2"

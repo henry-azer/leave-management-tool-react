@@ -5,7 +5,13 @@ import React, {
   useEffect,
   useMemo
 } from 'react'
+
 import PropTypes from 'prop-types'
+
+import {
+  createTheme,
+  ThemeProvider as MuiThemeProvider
+} from '@mui/material/styles'
 
 import { THEME } from '../../utils/constants/app-constants'
 import LocalStorageProvider from '../storage/local-storage-provider'
@@ -38,11 +44,17 @@ function ThemeProvider({ children }) {
     })
   }
 
+  const muiTheme = createTheme({
+    palette: {
+      mode: theme === 'light' ? 'light' : 'dark'
+    }
+  })
+
   const memoizedValue = useMemo(() => ({ theme, toggleTheme }), [theme])
 
   return (
     <ThemeContext.Provider value={memoizedValue}>
-      {children}
+      <MuiThemeProvider theme={muiTheme}>{children}</MuiThemeProvider>
     </ThemeContext.Provider>
   )
 }

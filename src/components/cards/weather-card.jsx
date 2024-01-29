@@ -44,9 +44,9 @@ const getCityByCoordinates = async () => {
 
 function WeatherCard() {
   const { t } = useTranslation()
-  const [weatherData, setWeatherData] = useState(null)
   const [time, setTime] = useState('')
   const [date, setDate] = useState('')
+  const [weatherData, setWeatherData] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -91,7 +91,7 @@ function WeatherCard() {
     <Box className="weather-card dashboard-card-theme">
       <Box className="weather-card-wrapper grid grid-cols-1 gap-6 p-5 w-full h-full">
         {!weatherData ? (
-          <Box className="flex flex-col items-center justify-center text-center">
+          <Box className="flex flex-col items-center justify-around py-6">
             <Typography variant="h6" component="p">
               {t('dashboard:weather:title')}
             </Typography>

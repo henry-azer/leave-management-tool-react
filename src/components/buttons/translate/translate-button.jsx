@@ -14,7 +14,11 @@ function TranslateButton() {
   }
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 100 }} size="small">
+    <FormControl
+      sx={{ m: 1, minWidth: 100 }}
+      size="small"
+      className="translate-button-wrapper"
+    >
       <InputLabel id="select-language-button-label">
         {t('common:language')}
       </InputLabel>

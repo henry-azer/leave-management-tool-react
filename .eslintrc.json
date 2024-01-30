@@ -23,6 +23,13 @@
     "react/react-in-jsx-scope": "off",
     "react/forbid-prop-types": "off",
     "semi": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ]
   }
 }

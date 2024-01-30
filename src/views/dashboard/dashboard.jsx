@@ -22,7 +22,7 @@ function Dashboard() {
   return (
     <Box className="dashboard-page dashboard-page-theme flex flex-col w-full h-full">
       <Box className="dashboard-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-10">
-        <Box className="cards-wrapper flex justify-between items-center gap-12">
+        <Box className="cards-wrapper flex justify-between items-stretch gap-12">
           <WeatherCard />
           <Box className="cards-inner-wrapper">
             <DashboardCard

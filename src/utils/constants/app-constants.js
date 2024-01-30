@@ -6,4 +6,4 @@ export const BASE_URL = {
 
 export const THEME = 'THEME'
 
-export const WEATHER_APIKEY = '1081e1636949690b16cb49baf572b334'
+export const WEATHER_API_KEY = '1081e1636949690b16cb49baf572b334'

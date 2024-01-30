@@ -22,9 +22,4 @@ export const getEmployees = (dispatch) => async () => {
   }
 }
 
-export function clearEmployees() {
-  return {
-    type: 'CLEAR_REGISTRATION_DETAILS',
-    payload: null
-  }
-}
+export default getEmployees

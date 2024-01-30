@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 const EMPLOYEE_TABLE_COLUMNS = [
   {
     field: 'id',
@@ -45,7 +47,9 @@ const EMPLOYEE_TABLE_COLUMNS = [
   {
     field: 'joinDate',
     headerName: 'Join Date',
-    editable: true
+    type: 'date',
+    editable: true,
+    valueFormatter: (params) => moment(params?.value).format('DD/MM/YYYY')
   }
 ]
 

@@ -5,8 +5,11 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.4",
-    "@mui/material": "^5.15.4",
+    "@mui/icons-material": "^5.15.6",
+    "@mui/material": "^5.15.6",
+    "@mui/system": "^5.15.6",
+    "@mui/x-data-grid": "^6.19.2",
+    "@mui/x-data-grid-generator": "^6.19.2",
     "@reduxjs/toolkit": "^2.0.1",
     "axios": "^1.6.5",
     "axios-delay": "^1.0.0-rc6",

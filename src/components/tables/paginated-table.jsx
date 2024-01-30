@@ -64,7 +64,7 @@ function PaginatedTable({ data, columns, hasActions, isLoading }) {
     updatedColumns.push({
       field: 'actions',
       type: 'actions',
-      headerName: 'Actions',
+      headerName: '',
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit
@@ -119,7 +119,7 @@ function PaginatedTable({ data, columns, hasActions, isLoading }) {
 }
 
 PaginatedTable.propTypes = {
-  columns: PropTypes.array.isRequired,
+  columns: PropTypes.array,
   hasActions: PropTypes.bool,
   isLoading: PropTypes.bool,
   data: PropTypes.array
@@ -128,7 +128,8 @@ PaginatedTable.propTypes = {
 PaginatedTable.defaultProps = {
   hasActions: false,
   isLoading: false,
-  data: {}
+  columns: [],
+  data: []
 }
 
 export default PaginatedTable

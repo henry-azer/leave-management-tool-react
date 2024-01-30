@@ -46,11 +46,37 @@ const ar = {
   },
 
   employees: {
-    title: 'الموظفين'
+    title: 'الموظفين',
+    add: 'أضف موظف',
+    table: {
+      header: {
+        id: 'الرقم التعريفي',
+        name: 'الاسم',
+        age: 'العمر',
+        gender: 'الجنس',
+        email: 'البريد الإلكتروني',
+        phoneNumber: 'رقم الهاتف',
+        jobTitle: 'المسمى الوظيفي',
+        joinDate: 'تاريخ الانضمام'
+      }
+    }
   },
 
   attendance: {
-    title: 'الحضور'
+    title: 'الحضور',
+    holiday: {
+      add: 'أضف عطلة'
+    },
+    table: {
+      header: {
+        id: 'الرقم التعريفي',
+        name: 'الاسم',
+        status: 'الحالة',
+        checkinTime: 'وقت الحضور',
+        checkoutTime: 'وقت الانصراف',
+        workHours: 'ساعات العمل'
+      }
+    }
   },
 
   statistics: {

@@ -46,11 +46,37 @@ const fr = {
   },
 
   employees: {
-    title: 'Employés'
+    title: 'Employés',
+    add: 'Ajouter un employé',
+    table: {
+      header: {
+        id: 'ID',
+        name: 'Nom',
+        age: 'Âge',
+        gender: 'Genre',
+        email: 'E-mail',
+        phoneNumber: 'Numéro de téléphone',
+        jobTitle: 'Titre du poste',
+        joinDate: "Date d'adhésion"
+      }
+    }
   },
 
   attendance: {
-    title: 'Présence'
+    title: 'Présence',
+    holiday: {
+      add: 'Ajouter des vacances'
+    },
+    table: {
+      header: {
+        id: 'ID',
+        name: 'Nom',
+        status: 'Statut',
+        checkinTime: "Heure d'arrivée",
+        checkoutTime: 'Heure de départ',
+        workHours: 'Heures de travail'
+      }
+    }
   },
 
   statistics: {

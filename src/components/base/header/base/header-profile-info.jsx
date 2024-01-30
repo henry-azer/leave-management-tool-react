@@ -1,8 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
-
 import { useTranslation } from 'react-i18next'
-
 import { Box, Avatar, MenuItem, Typography } from '@mui/material'
 import {
   ExpandMore as ArrowDownIcon,
@@ -17,6 +15,21 @@ import Divider from '../../../divider/divider'
 function HeaderProfileInfo() {
   const { t } = useTranslation()
   const [toggleDropdown, setToggleDropdown] = useState(false)
+  const dropdownRef = useRef(null)
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setToggleDropdown(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+
   const preventDragHandler = (event) => {
     event.preventDefault()
   }
@@ -26,7 +39,11 @@ function HeaderProfileInfo() {
   }
 
   return (
-    <Box className="header-profile-info" onClick={handleToggleDropdown}>
+    <Box
+      className="header-profile-info"
+      onClick={handleToggleDropdown}
+      ref={dropdownRef}
+    >
       <Box className="user-info">
         <Avatar
           onDragStart={preventDragHandler}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 import { SnackbarProvider } from 'notistack'
 
@@ -13,11 +14,13 @@ import './configs/axios'
 import './styles/styles.scss'
 import './services/localization/i18n'
 
+const queryClient = new QueryClient()
+
 const container = document.getElementById('root')
 const root = createRoot(container)
 
 root.render(
-  <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
     <ThemeProvider>
       <SnackbarProvider>
         <Provider store={store}>
@@ -25,5 +28,5 @@ root.render(
         </Provider>
       </SnackbarProvider>
     </ThemeProvider>
-  </React.StrictMode>
+  </QueryClientProvider>
 )

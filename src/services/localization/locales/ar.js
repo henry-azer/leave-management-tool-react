@@ -57,7 +57,8 @@ const ar = {
         email: 'البريد الإلكتروني',
         phoneNumber: 'رقم الهاتف',
         jobTitle: 'المسمى الوظيفي',
-        joinDate: 'تاريخ الانضمام'
+        joinDate: 'تاريخ الانضمام',
+        vacationsBalance: 'رصيد الاجازات'
       }
     }
   },
@@ -145,6 +146,7 @@ const ar = {
 
   common: {
     back: 'رجوع',
+    submit: 'إرسال',
     language: 'اللغة',
     error: {
       title: 'خطأ',
@@ -152,6 +154,46 @@ const ar = {
       not_found: 'غير موجود',
       server_error: 'خطأ في الخادم',
       unknown: 'خطأ غير معروف'
+    }
+  },
+
+  form: {
+    name: {
+      label: 'الاسم',
+      required: 'الاسم مطلوب.'
+    },
+    email: {
+      label: 'البريد الإلكتروني',
+      required: 'عنوان البريد الإلكتروني مطلوب.',
+      invalid: 'يرجى إدخال عنوان بريد إلكتروني صحيح.'
+    },
+    phoneNumber: {
+      label: 'رقم الهاتف',
+      required: 'رقم الهاتف مطلوب.'
+    },
+    age: {
+      label: 'العمر',
+      required: 'العمر مطلوب.',
+      positive: 'يجب أن يكون العمر رقمًا موجبًا.',
+      integer: 'يجب أن يكون العمر عددًا صحيحًا.'
+    },
+    gender: {
+      label: 'الجنس',
+      required: 'الجنس مطلوب.'
+    },
+    jobTitle: {
+      label: 'المسمى الوظيفي',
+      required: 'المسمى الوظيفي مطلوب.'
+    },
+    joinDate: {
+      label: 'تاريخ الانضمام',
+      required: 'تاريخ الانضمام مطلوب.'
+    },
+    vacationsBalance: {
+      label: 'رصيد الإجازات',
+      required: 'رصيد الإجازات مطلوب.',
+      positive: 'يجب أن يكون رصيد الإجازات رقمًا موجبًا.',
+      integer: 'يجب أن يكون رصيد الإجازات عددًا صحيحًا.'
     }
   }
 }

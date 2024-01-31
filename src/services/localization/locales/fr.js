@@ -57,7 +57,8 @@ const fr = {
         email: 'E-mail',
         phoneNumber: 'Numéro de téléphone',
         jobTitle: 'Titre du poste',
-        joinDate: "Date d'adhésion"
+        joinDate: "Date d'adhésion",
+        vacationsBalance: 'Solde de vacances'
       }
     }
   },
@@ -145,6 +146,7 @@ const fr = {
 
   common: {
     back: 'Retour',
+    submit: 'Envoyer',
     language: 'Langue',
     error: {
       title: 'Erreur',
@@ -152,6 +154,46 @@ const fr = {
       not_found: 'Non trouvé',
       server_error: 'Erreur du serveur',
       unknown: 'Erreur inconnue'
+    }
+  },
+
+  form: {
+    name: {
+      label: 'Nom',
+      required: 'Le nom est requis.'
+    },
+    email: {
+      label: 'E-mail',
+      required: "L'adresse e-mail est requise.",
+      invalid: 'Veuillez saisir une adresse e-mail valide.'
+    },
+    phoneNumber: {
+      label: 'Numéro de téléphone',
+      required: 'Le numéro de téléphone est requis.'
+    },
+    age: {
+      label: 'Âge',
+      required: "L'âge est requis.",
+      positive: "L'âge doit être un nombre positif.",
+      integer: "L'âge doit être un nombre entier."
+    },
+    gender: {
+      label: 'Sexe',
+      required: 'Le sexe est requis.'
+    },
+    jobTitle: {
+      label: 'Titre du poste',
+      required: 'Le titre du poste est requis.'
+    },
+    joinDate: {
+      label: "Date d'embauche",
+      required: "La date d'embauche est requise."
+    },
+    vacationsBalance: {
+      label: 'Solde des congés',
+      required: 'Le solde des congés est requis.',
+      positive: 'Le solde des congés doit être un nombre positif.',
+      integer: 'Le solde des congés doit être un nombre entier.'
     }
   }
 }

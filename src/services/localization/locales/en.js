@@ -57,7 +57,8 @@ const en = {
         email: 'Email',
         phoneNumber: 'Phone Number',
         jobTitle: 'Job Title',
-        joinDate: 'Join Date'
+        joinDate: 'Join Date',
+        vacationsBalance: 'Vacations Balance'
       }
     }
   },
@@ -145,6 +146,7 @@ const en = {
 
   common: {
     back: 'Back',
+    submit: 'Submit',
     language: 'Language',
     error: {
       title: 'Error',
@@ -152,6 +154,46 @@ const en = {
       not_found: 'Not Found',
       server_error: 'Server Error',
       unknown: 'Unknown Error'
+    }
+  },
+
+  form: {
+    name: {
+      label: 'Name',
+      required: 'Name is required.'
+    },
+    email: {
+      label: 'Email',
+      required: 'Email address is required.',
+      invalid: 'Please enter a valid email address.'
+    },
+    phoneNumber: {
+      label: 'Phone Number',
+      required: 'Phone number is required.'
+    },
+    age: {
+      label: 'Age',
+      required: 'Age is required.',
+      positive: 'Age must be a positive number.',
+      integer: 'Age must be an integer.'
+    },
+    gender: {
+      label: 'Gender',
+      required: 'Gender is required.'
+    },
+    jobTitle: {
+      label: 'Job Title',
+      required: 'Job title is required.'
+    },
+    joinDate: {
+      label: 'Join Date',
+      required: 'Join date is required.'
+    },
+    vacationsBalance: {
+      label: 'Vacations Balance',
+      required: 'Vacations balance is required.',
+      positive: 'Vacations balance must be a positive number.',
+      integer: 'Vacations balance must be an integer.'
     }
   }
 }

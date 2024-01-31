@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import moment from 'moment'
 
-import PaginatedTable from '../../common/tables/paginated-table'
+import PaginatedTable from '../../../common/tables/paginated-table'
 
 function EmployeesTable({ data, isLoading, hasActions }) {
   const { t } = useTranslation()
@@ -59,6 +59,14 @@ function EmployeesTable({ data, isLoading, hasActions }) {
       type: 'date',
       editable: true,
       valueFormatter: (params) => moment(params?.value).format('DD-MM-YYYY')
+    },
+    {
+      field: 'vacationsBalance',
+      headerName: t('employees:table:header:vacationsBalance'),
+      type: 'number',
+      align: 'left',
+      headerAlign: 'left',
+      editable: true
     }
   ]
 

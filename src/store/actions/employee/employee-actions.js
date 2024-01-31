@@ -22,4 +22,13 @@ export const getEmployees = (dispatch) => async () => {
   }
 }
 
+export const createEmployee = () => async (employee) => {
+  try {
+    const response = await axios.post(URL, employee)
+    return response.data
+  } catch (error) {
+    throw new Error(error.response.data.message)
+  }
+}
+
 export default getEmployees

@@ -21,7 +21,7 @@ function Settings() {
   return (
     <Box className="settings-page settings-page-theme flex flex-col w-full h-full">
       <Box className="settings-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-7">
-        <BackButton text={t('settings:title')} hasBackButton />
+        <BackButton text={t('settings:title')} />
         <Box className="settings-inner-wrapper">
           <Box className="cards-wrapper flex flex-wrap gap-5 p-6">
             <SettingsCard

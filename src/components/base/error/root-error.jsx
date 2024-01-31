@@ -29,7 +29,7 @@ function RootError() {
           error.statusText ||
           t('common:error:unknown')}
       </Typography>
-      <BackButton text={t('common:back')} hasBackButton />
+      <BackButton text={t('common:back')} />
     </Box>
   )
 }

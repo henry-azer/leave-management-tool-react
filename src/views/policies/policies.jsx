@@ -18,7 +18,7 @@ function Policies() {
   return (
     <Box className="policies-page policies-page-theme flex flex-col w-full h-full ">
       <Box className="policies-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-7">
-        <BackButton text={t('policies:title')} hasBackButton />
+        <BackButton text={t('policies:title')} />
         <Box className="policies-inner-wrapper">
           <Box className="core-values flex items-center justify-center">
             <img src={CoreValuesImage} alt="error" />

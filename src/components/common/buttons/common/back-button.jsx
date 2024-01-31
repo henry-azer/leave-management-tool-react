@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { Box, Typography } from '@mui/material'
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material'
 
-function BackButton({ text, hasBackButton }) {
+function BackButton({ text }) {
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -23,13 +23,11 @@ function BackButton({ text, hasBackButton }) {
 
   return (
     <Box className="flex items-center gap-3">
-      {hasBackButton && (
-        <ArrowBackIcon
-          sx={{ fontSize: '19px' }}
-          className="back-button-arrow cursor-pointer"
-          onClick={handleBackNavigation}
-        />
-      )}
+      <ArrowBackIcon
+        sx={{ fontSize: '19px' }}
+        className="back-button-arrow cursor-pointer"
+        onClick={handleBackNavigation}
+      />
       <Typography variant="h6" component="p">
         {text}
       </Typography>
@@ -38,8 +36,7 @@ function BackButton({ text, hasBackButton }) {
 }
 
 BackButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  hasBackButton: PropTypes.bool.isRequired
+  text: PropTypes.string.isRequired
 }
 
 export default BackButton

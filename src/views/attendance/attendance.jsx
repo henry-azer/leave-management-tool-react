@@ -32,7 +32,7 @@ function Attendance() {
     <Box className="attendance-page attendance-page-theme flex flex-col w-full h-full ">
       <Box className="attendance-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-7">
         <Box className="flex justify-between items-center">
-          <BackButton text={t('attendance:title')} hasBackButton />
+          <BackButton text={t('attendance:title')} />
           <Button
             variant="contained"
             startIcon={<AddHolidayIcon className="ml-2" />}

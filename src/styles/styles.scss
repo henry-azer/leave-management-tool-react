@@ -508,6 +508,52 @@ body {
   }
 }
 
+// FORMS
+.overlay-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+
+  .overlay-form-wrapper {
+    position: relative;
+    padding: 25px;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    max-height: 85%;
+    width: fit-content;
+    max-width: 85%;
+
+    [dir='rtl'] & {
+      left: auto;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    .close-button {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      font-size: 26px;
+      cursor: pointer;
+
+       [dir='rtl'] & {
+         right: auto;
+         left: 25px;
+        }
+    }
+
+    .text-field {
+      width: 48%;
+    }
+  }
+}
+
 /* -------------------------------------------------------- */
 
 /* ---------- MEDIA QUERIES START -------------------- */
@@ -632,6 +678,14 @@ body {
 }
 
 @media (max-width: 700px) {
+  .overlay-form {
+    .overlay-form-wrapper {
+      .text-field {
+        width: 100%;
+      }
+    }
+  }
+
   .side-bar {
     top: -100%;
     left: -100%;
@@ -725,7 +779,7 @@ body {
   }
 
   .page-route {
-    top: 30%;
+    top: 32%;
     left: 50%;
     height: 65%;
     transform: translateX(-50%);

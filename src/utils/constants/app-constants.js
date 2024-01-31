@@ -1,5 +1,5 @@
 export const BASE_URL = {
-  DEV: 'https://af2c2898-e151-4c53-84d4-9b4deee7e98e.mock.pstmn.io',
+  DEV: 'https://c6b27a11-da0e-4723-a756-ab55536c7c99.mock.pstmn.io',
   STAGING: 'http://127.0.0.1:8080',
   PRODUCTION: 'http://127.0.0.1:8080'
 }

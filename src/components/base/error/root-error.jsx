@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next'
 
 import { Box, Typography } from '@mui/material'
 
-import BackButton from '../buttons/base/back-button'
-import ErrorImage from '../../assets/images/error.png'
+import BackButton from '../../common/buttons/common/back-button'
+import ErrorImage from '../../../assets/images/error.png'
 
 function RootError() {
   const { t } = useTranslation()

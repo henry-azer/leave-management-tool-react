@@ -7,8 +7,8 @@ import {
 } from '@mui/icons-material'
 import { Box } from '@mui/material'
 
-import PoliciesCard from '../../components/cards/policies-card'
-import BackButton from '../../components/buttons/base/back-button'
+import PoliciesCard from '../../components/views/policies/policies-card'
+import BackButton from '../../components/common/buttons/common/back-button'
 
 import CoreValuesImage from '../../assets/images/core-values.png'
 

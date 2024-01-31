@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
+
 import { useTranslation } from 'react-i18next'
+
 import { Box, Avatar, MenuItem, Typography } from '@mui/material'
 import {
   ExpandMore as ArrowDownIcon,
@@ -10,7 +12,8 @@ import {
   HelpOutline as HelpIcon,
   ExitToApp as LogoutIcon
 } from '@mui/icons-material'
-import Divider from '../../../divider/divider'
+
+import Divider from '../../../common/divider/divider'
 
 function HeaderProfileInfo() {
   const { t } = useTranslation()

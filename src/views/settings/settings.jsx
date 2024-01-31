@@ -7,11 +7,12 @@ import {
 import { Box, Typography } from '@mui/material'
 
 import { useTheme } from '../../services/theme/theme-context'
-import ThemeButton from '../../components/buttons/theme/theme-button'
 
-import BackButton from '../../components/buttons/base/back-button'
-import SettingsCard from '../../components/cards/settings-card'
-import TranslateButton from '../../components/buttons/translate/translate-button'
+import SettingsCard from '../../components/views/settings/settings-card'
+
+import ThemeButton from '../../components/common/buttons/theme/theme-button'
+import BackButton from '../../components/common/buttons/common/back-button'
+import TranslateButton from '../../components/common/buttons/translate/translate-button'
 
 function Settings() {
   const { t } = useTranslation()

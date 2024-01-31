@@ -13,10 +13,10 @@ import {
 import { Box, Typography } from '@mui/material'
 import { WiHumidity as HumidityIcon } from 'react-icons/wi'
 
-import ErrorImage from '../../assets/images/error.png'
-import Divider from '../divider/divider'
+import Divider from '../../../common/divider/divider'
+import ErrorImage from '../../../../assets/images/error.png'
 
-import fetchWeatherData from '../../store/actions/weather/weather-actions'
+import fetchWeatherData from '../../../../store/actions/weather/weather-actions'
 
 function WeatherCard() {
   const { t } = useTranslation()

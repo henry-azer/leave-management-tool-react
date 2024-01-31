@@ -4,13 +4,11 @@ import { useDispatch } from 'react-redux'
 import { useSnackbar } from 'notistack'
 import { useTranslation } from 'react-i18next'
 
-import moment from 'moment'
-
 import { Box, Button } from '@mui/material'
 import { GroupAddOutlined as AddEmployeeIcon } from '@mui/icons-material'
 
-import BackButton from '../../components/buttons/base/back-button'
-import EmployeesTable from '../../components/tables/paginated-table'
+import BackButton from '../../components/common/buttons/common/back-button'
+import EmployeesTable from '../../components/views/employees/employees-table'
 
 import { getEmployees } from '../../store/actions'
 
@@ -30,59 +28,6 @@ function Employees() {
     }
   )
 
-  const tableColumnsHeaders = [
-    {
-      field: 'id',
-      headerName: t('employees:table:header:id'),
-      type: 'number',
-      align: 'left',
-      headerAlign: 'left',
-      editable: true
-    },
-    {
-      field: 'name',
-      headerName: t('employees:table:header:name'),
-      editable: true
-    },
-    {
-      field: 'age',
-      headerName: t('employees:table:header:age'),
-      type: 'number',
-      align: 'left',
-      headerAlign: 'left',
-      editable: true
-    },
-    {
-      field: 'gender',
-      headerName: t('employees:table:header:gender'),
-      editable: true,
-      type: 'singleSelect',
-      valueOptions: ['Male', 'Female']
-    },
-    {
-      field: 'email',
-      headerName: t('employees:table:header:email'),
-      editable: true
-    },
-    {
-      field: 'phoneNumber',
-      headerName: t('employees:table:header:phoneNumber'),
-      editable: true
-    },
-    {
-      field: 'jobTitle',
-      headerName: t('employees:table:header:jobTitle'),
-      editable: true
-    },
-    {
-      field: 'joinDate',
-      headerName: t('employees:table:header:joinDate'),
-      type: 'date',
-      editable: true,
-      valueFormatter: (params) => moment(params?.value).format('DD-MM-YYYY')
-    }
-  ]
-
   return (
     <Box className="employees-page employees-page-theme flex flex-col w-full h-full ">
       <Box className="employees-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-7">
@@ -101,7 +46,6 @@ function Employees() {
           sx={{ height: '90%' }}
         >
           <EmployeesTable
-            columns={tableColumnsHeaders}
             data={employees || []}
             isLoading={isLoading}
             hasActions

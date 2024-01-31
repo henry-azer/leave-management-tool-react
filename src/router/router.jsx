@@ -2,7 +2,7 @@ import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import MainLayout from '../components/base/layout/main-layout'
-import RootError from '../components/errors/root-error'
+import RootError from '../components/base/error/root-error'
 
 import Dashboard from '../views/dashboard/dashboard'
 import Employees from '../views/employees/employees'

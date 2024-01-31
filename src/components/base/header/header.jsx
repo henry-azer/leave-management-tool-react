@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import { Box, Typography } from '@mui/material'
 
 import Hamburger from 'hamburger-react'
-import Divider from '../../divider/divider'
-import Logo from '../../../assets/images/emaratech-logo.svg'
 
+import Divider from '../../common/divider/divider'
+import Logo from '../../../assets/images/emaratech-logo.svg'
 import HeaderProfileInfo from './base/header-profile-info'
 
 function Header({ isResSideBarOpen, setResSideBarOpen }) {

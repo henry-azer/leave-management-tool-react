@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 
-import { useTheme } from '../../../services/theme/theme-context'
+import { useTheme } from '../../../../services/theme/theme-context'
 
 function ThemeButton() {
   const { theme, toggleTheme } = useTheme()

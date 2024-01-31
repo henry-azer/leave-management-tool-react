@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 
 import { InputLabel, MenuItem, FormControl, Select } from '@mui/material'
 
-import Locales from '../../../services/localization/locales/locales'
+import Locales from '../../../../services/localization/locales/locales'
 
 function TranslateButton() {
   const { i18n, t } = useTranslation()

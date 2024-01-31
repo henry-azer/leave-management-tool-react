@@ -10,11 +10,11 @@ import {
 } from '@mui/icons-material'
 import { Box, Typography } from '@mui/material'
 
-import WeatherCard from '../../components/cards/weather-card'
-import DashboardCard from '../../components/cards/dashboard-card'
+import WeatherCard from '../../components/views/dashboard/cards/weather-card'
+import DashboardCard from '../../components/views/dashboard/cards/dashboard-card'
 
-import DashboardBarChart from '../../components/charts/dashboard-bar-chart'
-import DashboardPolarChart from '../../components/charts/dashboard-polar-chart'
+import DashboardBarChart from '../../components/views/dashboard/charts/dashboard-bar-chart'
+import DashboardPolarChart from '../../components/views/dashboard/charts/dashboard-polar-chart'
 
 function Dashboard() {
   const { t } = useTranslation()

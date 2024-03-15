@@ -111,7 +111,7 @@ function WeatherCard() {
       <Box className="weather-card-wrapper px-2 py-6 gap-4 flex-1 h-full w-full">
         <Box className="flex flex-col justify-center items-center gap-3 flex-1 h-full">
           <Box className="flex flex-col items-center gap-1">
-            <Box className="flex items-end justify-between w-full">
+            <Box className="flex items-end gap-4 justify-between w-full">
               <Box className="flex items-center gap-1">
                 <LocationIcon />
                 <Typography variant="h5" component="p">

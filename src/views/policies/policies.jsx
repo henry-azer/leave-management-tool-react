@@ -19,26 +19,28 @@ function Policies() {
     <Box className="policies-page policies-page-theme flex flex-col w-full h-full ">
       <Box className="policies-page-wrapper flex flex-col overflow-y-auto overflow-x-hidden flex-1 p-7">
         <BackButton text={t('policies:title')} />
-        <Box className="policies-inner-wrapper">
-          <Box className="core-values flex items-center justify-center">
-            <img src={CoreValuesImage} alt="error" />
-          </Box>
-          <Box className="flex flex-col gap-4 p-6">
-            <PoliciesCard
-              title={t('policies:card:empowerment:title')}
-              description={t('policies:card:empowerment:description')}
-              icon={<WebhookIcon />}
-            />
-            <PoliciesCard
-              title={t('policies:card:collaborative:title')}
-              description={t('policies:card:collaborative:description')}
-              icon={<HandshakeIcon />}
-            />
-            <PoliciesCard
-              title={t('policies:card:pioneering:title')}
-              description={t('policies:card:pioneering:description')}
-              icon={<HeartInHandIcon />}
-            />
+        <Box className="flex items-center justify-center h-[85%]">
+          <Box className="policies-inner-wrapper">
+            <Box className="core-values flex items-center justify-center">
+              <img src={CoreValuesImage} alt="error" />
+            </Box>
+            <Box className="flex flex-col gap-4 p-6">
+              <PoliciesCard
+                title={t('policies:card:empowerment:title')}
+                description={t('policies:card:empowerment:description')}
+                icon={<WebhookIcon />}
+              />
+              <PoliciesCard
+                title={t('policies:card:collaborative:title')}
+                description={t('policies:card:collaborative:description')}
+                icon={<HandshakeIcon />}
+              />
+              <PoliciesCard
+                title={t('policies:card:pioneering:title')}
+                description={t('policies:card:pioneering:description')}
+                icon={<HeartInHandIcon />}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>

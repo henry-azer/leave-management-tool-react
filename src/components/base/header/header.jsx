@@ -7,7 +7,7 @@ import { Box, Typography } from '@mui/material'
 import Hamburger from 'hamburger-react'
 
 import Divider from '../../common/divider/divider'
-import Logo from '../../../assets/images/emaratech-logo.svg'
+import Logo from '../../../assets/images/logo.jpg'
 import HeaderProfileInfo from './base/header-profile-info'
 
 function Header({ isResSideBarOpen, setResSideBarOpen }) {

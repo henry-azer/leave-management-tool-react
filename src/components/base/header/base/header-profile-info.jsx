@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import { useTranslation } from 'react-i18next'
 
-import { Box, Avatar, MenuItem, Typography } from '@mui/material'
+import { Box, MenuItem, Typography } from '@mui/material'
 import {
   ExpandMore as ArrowDownIcon,
   ExpandLess as ArrowUpIcon,
@@ -33,10 +33,6 @@ function HeaderProfileInfo() {
     }
   }, [])
 
-  const preventDragHandler = (event) => {
-    event.preventDefault()
-  }
-
   const handleToggleDropdown = () => {
     setToggleDropdown(!toggleDropdown)
   }
@@ -48,18 +44,13 @@ function HeaderProfileInfo() {
       ref={dropdownRef}
     >
       <Box className="user-info">
-        <Avatar
-          onDragStart={preventDragHandler}
-          sx={{ width: 45, height: 45 }}
-          src="https://paloaltoheadshots.com/wp-content/uploads/2023/06/linkedIn-headshot.jpg"
-          alt="someone"
-        />
+        <PersonIcon fontSize="large" />
         <Box>
           <Typography className="user-name" variant="subtitle1">
-            Alex Williams
+            Henry Azer
           </Typography>
           <Typography className="user-email" variant="subtitle2">
-            someone@emaratech.ae
+            henryazer@outlook.com
           </Typography>
         </Box>
         {toggleDropdown ? <ArrowUpIcon /> : <ArrowDownIcon />}
